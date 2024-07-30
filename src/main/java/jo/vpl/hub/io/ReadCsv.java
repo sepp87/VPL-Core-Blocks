@@ -45,7 +45,7 @@ public class ReadCsv extends Hub {
 
         //Do action
         if (file != null && file.exists() && file.isFile() && file.getPath().endsWith(".csv")) {
-            lists = jo.util.IO.readCommaSeperatedFile(true, file);
+            lists = jo.vpl.core.Util.readCommaSeperatedFile(true, file);
         }
 
         //Set data
