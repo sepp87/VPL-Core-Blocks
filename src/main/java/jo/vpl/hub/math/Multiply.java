@@ -2,7 +2,7 @@ package jo.vpl.hub.math;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 
@@ -17,7 +17,7 @@ import jo.vpl.core.HubInfo;
         tags = {"math", "multiply"})
 public class Multiply extends Hub {
 
-    public Multiply(VplControl hostCanvas) {
+    public Multiply(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Mul");

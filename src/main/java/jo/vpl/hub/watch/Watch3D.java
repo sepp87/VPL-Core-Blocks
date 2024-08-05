@@ -1,7 +1,7 @@
 package jo.vpl.hub.watch;
 
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import jo.vpl.watch3D.ObjViewer;
 import java.util.List;
 import javafx.scene.Group;
@@ -23,7 +23,7 @@ public class Watch3D extends Hub {
      *
      * @param hostCanvas
      */
-    public Watch3D(VplControl hostCanvas) {
+    public Watch3D(Workspace hostCanvas) {
         super(hostCanvas);
         setResizable(true);
 

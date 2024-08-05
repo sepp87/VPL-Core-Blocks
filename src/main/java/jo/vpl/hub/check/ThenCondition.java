@@ -2,7 +2,7 @@ package jo.vpl.hub.check;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 import jo.vpl.core.Port;
@@ -21,7 +21,7 @@ public class ThenCondition extends Hub {
 
     static String[] operators = {">", ">=", "==", "!=", "<=", "<"};
 
-    public ThenCondition(VplControl hostCanvas) {
+    public ThenCondition(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Then");

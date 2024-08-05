@@ -6,7 +6,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -29,7 +29,7 @@ public class TextHub extends Hub {
 
     boolean editable = true;
 
-    public TextHub(VplControl hostCanvas) {
+    public TextHub(Workspace hostCanvas) {
         super(hostCanvas);
         setName("Panel");
         setResizable(true);

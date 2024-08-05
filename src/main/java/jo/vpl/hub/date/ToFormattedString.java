@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javafx.scene.control.ComboBox;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -36,7 +36,7 @@ public class ToFormattedString extends Hub {
     
     private SimpleDateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public ToFormattedString(VplControl hostCanvas) {
+    public ToFormattedString(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Date");

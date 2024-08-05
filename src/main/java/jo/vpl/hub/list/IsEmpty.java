@@ -2,7 +2,7 @@ package jo.vpl.hub.list;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 
@@ -17,7 +17,7 @@ import jo.vpl.core.HubInfo;
         tags = {"list", "empty"})
 public class IsEmpty extends Hub {
 
-    public IsEmpty(VplControl hostCanvas) {
+    public IsEmpty(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("i");

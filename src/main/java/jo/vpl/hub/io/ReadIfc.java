@@ -1,7 +1,7 @@
 package jo.vpl.hub.io;
 
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import java.io.File;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
@@ -22,7 +22,7 @@ public class ReadIfc extends Hub {
      *
      * @param hostCanvas
      */
-    public ReadIfc(VplControl hostCanvas) {
+    public ReadIfc(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Read .ifc");

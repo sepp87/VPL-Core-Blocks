@@ -2,7 +2,7 @@ package jo.vpl.hub.check;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javax.xml.namespace.QName;
@@ -25,7 +25,7 @@ public class IfCondition extends Hub {
     private final Label OPERATOR;
     static String[] operators = {">", ">=", "==", "!=", "<=", "<"};
 
-    public IfCondition(VplControl hostCanvas) {
+    public IfCondition(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName(">");

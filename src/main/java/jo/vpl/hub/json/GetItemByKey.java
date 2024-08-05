@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import static jo.vpl.core.Util.getBooleanValue;
@@ -33,7 +33,7 @@ public class GetItemByKey extends Hub {
 
     private JsonParser parser;
 
-    public GetItemByKey(VplControl hostCanvas) {
+    public GetItemByKey(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("getJsonValue");

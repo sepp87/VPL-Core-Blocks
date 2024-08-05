@@ -2,7 +2,7 @@ package jo.vpl.hub.list;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 import jo.vpl.core.Port;
@@ -18,7 +18,7 @@ import jo.vpl.core.Port;
         tags = {"list", "get", "item"})
 public class GetFirstItem extends Hub {
 
-    public GetFirstItem(VplControl hostCanvas) {
+    public GetFirstItem(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("i");

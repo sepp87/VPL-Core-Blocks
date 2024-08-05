@@ -6,7 +6,7 @@ import javafx.beans.property.ReadOnlyBooleanWrapper;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javax.xml.namespace.QName;
@@ -32,7 +32,7 @@ public class TimeInterval extends Hub {
     private Timer timer = null;
     private Thread timerThread = null;
 
-    public TimeInterval(VplControl hostCanvas) {
+    public TimeInterval(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Template");

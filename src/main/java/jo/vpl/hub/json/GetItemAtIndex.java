@@ -6,7 +6,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import static jo.vpl.core.Util.getBooleanValue;
@@ -30,7 +30,7 @@ public class GetItemAtIndex extends Hub {
 
     private JsonParser parser;
 
-    public GetItemAtIndex(VplControl hostCanvas) {
+    public GetItemAtIndex(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("getJsonValue");

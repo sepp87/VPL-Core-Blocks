@@ -2,7 +2,7 @@ package jo.vpl.hub.math;
 
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 
@@ -17,7 +17,7 @@ import jo.vpl.core.HubInfo;
         tags = {"math", "divide", "/"})
 public class Divide extends Hub {
 
-    public Divide(VplControl hostCanvas) {
+    public Divide(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Div");

@@ -7,7 +7,7 @@ import com.google.gson.JsonParser;
 import java.util.ArrayList;
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import static jo.vpl.core.Util.getBooleanValue;
@@ -31,7 +31,7 @@ public class ArrayAsList extends Hub {
 
     private JsonParser parser;
 
-    public ArrayAsList(VplControl hostCanvas) {
+    public ArrayAsList(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("ArrayAsList");

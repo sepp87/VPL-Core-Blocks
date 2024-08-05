@@ -1,7 +1,7 @@
 package jo.vpl.hub.input;
 
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import java.io.File;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextField;
@@ -27,7 +27,7 @@ import jo.vpl.xml.HubTag;
 )
 public class FileHub extends Hub {
 
-    public FileHub(VplControl hostCanvas) {
+    public FileHub(Workspace hostCanvas) {
         super(hostCanvas);
         setName("File");
 

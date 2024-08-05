@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import jo.vpl.core.HubInfo;
@@ -22,7 +22,7 @@ import jo.vpl.xml.HubTag;
         tags = {"list", "add", "accumulate"})
 public class AccumulateItems extends Hub {
 
-    public AccumulateItems(VplControl hostCanvas) {
+    public AccumulateItems(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("i++");

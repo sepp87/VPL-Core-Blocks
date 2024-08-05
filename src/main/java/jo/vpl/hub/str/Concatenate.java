@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import jo.vpl.core.HubInfo;
@@ -28,7 +28,7 @@ public class Concatenate extends Hub {
 
     private Port temporaryPort = null;
 
-    public Concatenate(VplControl hostCanvas) {
+    public Concatenate(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Concat");

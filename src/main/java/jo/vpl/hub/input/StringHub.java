@@ -1,6 +1,6 @@
 package jo.vpl.hub.input;
 
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import jo.vpl.core.Hub;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -24,7 +24,7 @@ import jo.vpl.xml.HubTag;
         tags = {"input", "line", "string"})
 public class StringHub extends Hub {
 
-    public StringHub(VplControl hostCanvas) {
+    public StringHub(Workspace hostCanvas) {
         super(hostCanvas);
         setName("String");
 

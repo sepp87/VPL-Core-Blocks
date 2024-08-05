@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import jo.vpl.core.HubInfo;
 import jo.vpl.core.Port;
@@ -21,7 +21,7 @@ import jo.vpl.util.IconType;
         tags = {"list", "sort"})
 public class Sort extends Hub {
 
-    public Sort(VplControl hostCanvas) {
+    public Sort(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("i");

@@ -1,7 +1,7 @@
 package jo.vpl.hub.io;
 
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import java.io.File;
 import java.util.List;
 import javafx.scene.control.Label;
@@ -23,7 +23,7 @@ public class ReadCsv extends Hub {
      *
      * @param hostCanvas
      */
-    public ReadCsv(VplControl hostCanvas) {
+    public ReadCsv(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Read .csv");

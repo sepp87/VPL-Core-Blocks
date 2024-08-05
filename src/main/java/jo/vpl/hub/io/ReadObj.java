@@ -1,7 +1,7 @@
 package jo.vpl.hub.io;
 
 import jo.vpl.core.Hub;
-import jo.vpl.core.VplControl;
+import jo.vpl.core.Workspace;
 import jo.vpl.watch3D.ObjParser;
 import java.io.File;
 import java.util.List;
@@ -27,7 +27,7 @@ public class ReadObj extends Hub {
      *
      * @param hostCanvas
      */
-    public ReadObj(VplControl hostCanvas) {
+    public ReadObj(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Obj");
