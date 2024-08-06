@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.Reverse",
+        identifier = "List.Reverse",
         category = "List",
         description = "Reverse the list order",
         tags = {"list", "reverse"})

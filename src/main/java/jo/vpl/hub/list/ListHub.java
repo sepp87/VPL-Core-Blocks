@@ -13,7 +13,7 @@ import jo.vpl.core.Port;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.NewList",
+        identifier = "List.NewList",
         category = "List",
         description = "Create a list from a single value",
         tags = {"list", "new"})

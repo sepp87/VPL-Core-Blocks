@@ -18,7 +18,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "In.String",
+        identifier = "In.String",
         category = "Input",
         description = "Input a line of text",
         tags = {"input", "line", "string"})

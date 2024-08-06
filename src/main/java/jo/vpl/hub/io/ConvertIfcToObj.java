@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "IO.ConvertIfcToCsv",
+        identifier = "IO.ConvertIfcToCsv",
         category = "io",
         description = "Convert Ifc to Obj",
         tags = {"io", "ifc", "obj", "convert", "read", "parse"})

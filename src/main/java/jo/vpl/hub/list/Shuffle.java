@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.Shuffle",
+        identifier = "List.Shuffle",
         category = "List",
         description = "Shuffle the list",
         tags = {"list", "shuffle"})

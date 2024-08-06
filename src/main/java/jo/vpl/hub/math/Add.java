@@ -12,7 +12,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Math.Add",
+        identifier = "Math.Add",
         category = "Math",
         description = "Add B to A",
         tags = {"math", "add", "plus"})

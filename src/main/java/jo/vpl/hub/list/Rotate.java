@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.Rotate",
+        identifier = "List.Rotate",
         category = "List",
         description = "Rotate the items of a list by an index",
         tags = {"list", "shift"})

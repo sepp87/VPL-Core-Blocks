@@ -16,7 +16,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Check.If",
+        identifier = "Check.If",
         category = "Check",
         description = "A boolean statement",
         tags = {"check", "if", "condition"})

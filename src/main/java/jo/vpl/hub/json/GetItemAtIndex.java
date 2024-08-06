@@ -22,7 +22,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Json.GetItemAtIndex",
+        identifier = "Json.GetItemAtIndex",
         category = "Json",
         description = "Get a item at index",
         tags = {"json", "get", "jsonarray", "value", "index"})

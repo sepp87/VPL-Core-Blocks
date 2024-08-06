@@ -20,7 +20,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "In.File",
+        identifier = "In.File",
         category = "Input",
         description = "Open a file",
         tags = {"file", "open", "load"}

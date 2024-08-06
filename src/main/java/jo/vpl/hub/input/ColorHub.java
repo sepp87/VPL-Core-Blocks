@@ -13,7 +13,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "In.Color",
+        identifier = "In.Color",
         category = "Input",
         description = "Pick a nice color from the palette",
         tags = {"input", "color"})

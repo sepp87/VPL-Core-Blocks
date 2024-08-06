@@ -12,7 +12,7 @@ import jo.vpl.core.Port;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.GetFirstItem",
+        identifier = "List.GetFirstItem",
         category = "List",
         description = "Get the first item of a list",
         tags = {"list", "get", "item"})

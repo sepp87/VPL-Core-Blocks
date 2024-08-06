@@ -14,7 +14,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.ReplaceItemAtIndex",
+        identifier = "List.ReplaceItemAtIndex",
         category = "List",
         description = "Replace an item of a list by its index",
         tags = {"list", "replace"})

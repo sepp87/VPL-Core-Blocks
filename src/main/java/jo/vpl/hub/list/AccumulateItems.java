@@ -16,7 +16,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.AccumulateItems",
+        identifier = "List.AccumulateItems",
         category = "List",
         description = "Accumulate incoming items to a list",
         tags = {"list", "add", "accumulate"})

@@ -13,7 +13,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Check.Then",
+        identifier = "Check.Then",
         category = "Check",
         description = "Activate hub when condition is true",
         tags = {"check", "if", "condition"})

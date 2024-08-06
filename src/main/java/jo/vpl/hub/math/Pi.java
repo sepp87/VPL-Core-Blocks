@@ -10,7 +10,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-	name = "Math.Pi",  
+	identifier = "Math.Pi",  
         category = "Math",
         description = "Pi",
 	tags = {"math","pi"})

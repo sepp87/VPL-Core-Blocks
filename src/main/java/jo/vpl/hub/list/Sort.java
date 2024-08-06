@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.Sort",
+        identifier = "List.Sort",
         category = "List",
         description = "Sort the list",
         tags = {"list", "sort"})

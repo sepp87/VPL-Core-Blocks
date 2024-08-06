@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Math.Divide",
+        identifier = "Math.Divide",
         category = "Math",
         description = "Divide A by B",
         tags = {"math", "divide", "/"})

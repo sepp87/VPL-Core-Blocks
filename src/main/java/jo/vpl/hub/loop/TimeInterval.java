@@ -22,7 +22,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Loop.TimeInterval",
+        identifier = "Loop.TimeInterval",
         category = "Loop",
         description = "Loop a hub in a given time interval",
         tags = {"loop", "interval", "time", "repeat"})

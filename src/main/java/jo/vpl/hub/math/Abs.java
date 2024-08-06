@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Math.Abs",
+        identifier = "Math.Abs",
         category = "Math",
         description = "Get the absolute value of A",
         tags = {"math", "abs"})

@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.Size",
+        identifier = "List.Size",
         category = "List",
         description = "Get the list length",
         tags = {"list", "size", "length"})

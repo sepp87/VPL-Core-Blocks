@@ -12,7 +12,7 @@ import jo.vpl.core.Port;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.GetLastItem",
+        identifier = "List.GetLastItem",
         category = "List",
         description = "Get the last item of a list",
         tags = {"list", "get", "item"})

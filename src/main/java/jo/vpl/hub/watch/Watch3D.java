@@ -12,7 +12,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Util.Watch3D",
+        identifier = "Util.Watch3D",
         category = "View",
         description = "View 3D geometry",
         tags = {"view", "3D"})

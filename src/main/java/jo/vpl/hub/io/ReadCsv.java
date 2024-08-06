@@ -12,7 +12,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "IO.ReadCsv",
+        identifier = "IO.ReadCsv",
         category = "io",
         description = "Read a CSV file",
         tags = {"io", "csv", "read", "parse"})

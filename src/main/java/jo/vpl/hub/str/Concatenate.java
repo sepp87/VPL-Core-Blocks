@@ -20,7 +20,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Str.Concatenate",
+        identifier = "Str.Concatenate",
         category = "Str",
         description = "Concatenate multiple strings to a single one",
         tags = {"string", "concatenate"})

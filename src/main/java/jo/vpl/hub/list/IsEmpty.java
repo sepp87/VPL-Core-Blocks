@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.IsEmpty",
+        identifier = "List.IsEmpty",
         category = "List",
         description = "Check if a list is empty",
         tags = {"list", "empty"})

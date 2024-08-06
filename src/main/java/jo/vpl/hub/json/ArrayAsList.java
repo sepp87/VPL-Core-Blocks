@@ -23,7 +23,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Json.ArrayAsList",
+        identifier = "Json.ArrayAsList",
         category = "Json",
         description = "Get a array as list",
         tags = {"json", "get", "jsonarray", "list"})

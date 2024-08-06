@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.RemoveItemAtIndex",
+        identifier = "List.RemoveItemAtIndex",
         category = "List",
         description = "Remove an item from a list by its index",
         tags = {"list", "remove", "index", "delete"})

@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "IO.ReadObj",
+        identifier = "IO.ReadObj",
         category = "io",
         description = "Read a Wavefront .obj file",
         tags = {"read", "obj", "parse"}

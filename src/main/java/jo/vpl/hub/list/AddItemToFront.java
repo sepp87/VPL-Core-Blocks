@@ -14,7 +14,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.AddItemToFront",
+        identifier = "List.AddItemToFront",
         category = "List",
         description = "Add an item to the front of a list",
         tags = {"list", "add"})

@@ -25,7 +25,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Json.GetItemByKey",
+        identifier = "Json.GetItemByKey",
         category = "Json",
         description = "Get a item by key",
         tags = {"json", "get", "jsonobject", "value", "key"})

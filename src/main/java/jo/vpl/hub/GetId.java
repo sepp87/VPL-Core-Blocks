@@ -15,7 +15,7 @@ import jo.vpl.util.IconType;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Util.GetId",
+        identifier = "Util.GetId",
         category = "General",
         description = "Get the Id of this object.",
         tags = {"util", "id", "general"})

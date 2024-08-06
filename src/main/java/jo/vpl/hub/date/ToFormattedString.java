@@ -28,7 +28,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Date.ToFormattedString",
+        identifier = "Date.ToFormattedString",
         category = "Date",
         description = "Convert a date to another formatted date string",
         tags = {"date", "format", "convert"})

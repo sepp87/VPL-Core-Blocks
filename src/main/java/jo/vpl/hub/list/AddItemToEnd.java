@@ -13,7 +13,7 @@ import jo.vpl.core.Port;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.AddItemToEnd",
+        identifier = "List.AddItemToEnd",
         category = "List",
         description = "Add an item to the end of a list",
         tags = {"list", "add"})

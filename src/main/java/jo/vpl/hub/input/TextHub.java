@@ -21,7 +21,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "In.Text",
+        identifier = "In.Text",
         category = "Input",
         description = "Input text or observe output as text",
         tags = {"input", "panel", "text"})

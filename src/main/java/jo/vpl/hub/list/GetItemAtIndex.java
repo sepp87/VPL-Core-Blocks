@@ -13,7 +13,7 @@ import jo.vpl.core.Port;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.GetItemAtIndex",
+        identifier = "List.GetItemAtIndex",
         category = "List",
         description = "Get an item from a list by its index",
         tags = {"list", "index", "item"})

@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "IO.ReadIfc",
+        identifier = "IO.ReadIfc",
         category = "io",
         description = "Read an Ifc file",
         tags = {"io","view", "3D"})

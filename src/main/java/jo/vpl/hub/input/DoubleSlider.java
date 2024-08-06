@@ -21,7 +21,7 @@ import jo.vpl.xml.HubTag;
  *
  * @author JoostMeulenkamp
  */
-@HubInfo(name = "In.DoubleSlider",
+@HubInfo(identifier = "In.DoubleSlider",
         category = "Input",
         description = "Number Slider",
         tags = {"input", "slider"})

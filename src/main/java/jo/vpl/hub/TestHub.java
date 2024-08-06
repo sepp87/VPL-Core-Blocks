@@ -17,7 +17,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Util.TestHub",
+        identifier = "Util.TestHub",
         category = "General",
         description = "A template hub for further customization",
         tags = {"template", "dummy", "example"})

@@ -11,7 +11,7 @@ import jo.vpl.core.HubInfo;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "Math.Multiply",
+        identifier = "Math.Multiply",
         category = "Math",
         description = "Multiply A by B",
         tags = {"math", "multiply"})

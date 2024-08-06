@@ -16,7 +16,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "List.ClearList",
+        identifier = "List.ClearList",
         category = "List",
         description = "Clear the incoming list",
         tags = {"list", "clear", "empty"})

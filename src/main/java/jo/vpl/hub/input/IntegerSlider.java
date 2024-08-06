@@ -20,7 +20,7 @@ import jo.vpl.xml.HubTag;
  * @author JoostMeulenkamp
  */
 @HubInfo(
-        name = "In.IntegerSlider",
+        identifier = "In.IntegerSlider",
         category = "Input",
         description = "Number Slider",
         tags = {"input", "slider"})
