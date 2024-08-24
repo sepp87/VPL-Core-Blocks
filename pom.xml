@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>jo.vpl</groupId>
-    <artifactId>VPL-Core-Hubs</artifactId>
+    <artifactId>VPL-Core-Blocks</artifactId>
     <version>1</version>
     <packaging>jar</packaging>
     <dependencies>
@@ -27,7 +27,7 @@
     
     
     <build>
-        <finalName>VPL-Core-Hubs</finalName>
+        <finalName>VPL-Core-Blocks</finalName>
         <plugins>   
 
             <plugin>
@@ -47,8 +47,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <packageName>jo.vpl.hub</packageName>
-                            <mainClass>jo.vpl.hub.Main</mainClass>
+                            <packageName>jo.vpl.block</packageName>
+                            <mainClass>jo.vpl.block.Main</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
@@ -80,8 +80,8 @@
                             <goal>copy</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>${basedir}/target/VPL-Core-Hubs-jar-with-dependencies.jar</sourceFile>
-                            <destinationFile>${basedir}/build/VPL-Core-Hubs.jar</destinationFile>
+                            <sourceFile>${basedir}/target/VPL-Core-Blocks-jar-with-dependencies.jar</sourceFile>
+                            <destinationFile>${basedir}/build/VPL-Core-Blocks.jar</destinationFile>
                         </configuration>
                     </execution>
                 </executions>
