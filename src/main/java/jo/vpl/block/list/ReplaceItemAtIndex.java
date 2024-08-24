@@ -27,14 +27,14 @@ public class ReplaceItemAtIndex extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("List", Object.class);
-        addInPortToHub("Object", Object.class);
-        addInPortToHub("int : Index", int.class);
+        addInPortToBlock("List", Object.class);
+        addInPortToBlock("Object", Object.class);
+        addInPortToBlock("int : Index", int.class);
 
-        addOutPortToHub("Object", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         Label label = getAwesomeIcon(IconType.FA_EXCHANGE);
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

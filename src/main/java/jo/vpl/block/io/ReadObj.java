@@ -32,12 +32,12 @@ public class ReadObj extends Block {
 
         setName("Obj");
 
-        addInPortToHub("file", File.class);
-        addOutPortToHub("group", Group.class);
+        addInPortToBlock("file", File.class);
+        addOutPortToBlock("group", Group.class);
 
         Label label = getAwesomeIcon(IconType.FA_COGS);
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

@@ -8,7 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javax.xml.namespace.QName;
 import jo.vpl.block.loop.TimeInterval;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -30,17 +30,17 @@ public class IfCondition extends Block {
 
         setName(">");
 
-        addInPortToHub("Number : A", Number.class);
-        addInPortToHub("Number : B", Number.class);
+        addInPortToBlock("Number : A", Number.class);
+        addInPortToBlock("Number : B", Number.class);
 
-        addOutPortToHub("Boolean : Result", Boolean.class);
+        addOutPortToBlock("Boolean : Result", Boolean.class);
 
         OPERATOR = new Label("A > B");
         OPERATOR.setUserData(0);
         OPERATOR.getStyleClass().add("hub-text");
         OPERATOR.setOnMouseClicked(this::button_MouseClick);
 
-        addControlToHub(OPERATOR);
+        addControlToBlock(OPERATOR);
     }
 
     //Toggle between on and off by listening to the switch property of the timer
@@ -112,14 +112,14 @@ public class IfCondition extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         xmlTag.getOtherAttributes().put(QName.valueOf("operator"), (int) OPERATOR.getUserData() + "");
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         String value = xmlTag.getOtherAttributes().get(QName.valueOf("operator"));

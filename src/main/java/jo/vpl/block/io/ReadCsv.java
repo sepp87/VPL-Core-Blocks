@@ -28,13 +28,13 @@ public class ReadCsv extends Block {
 
         setName("Read .csv");
 
-        addInPortToHub("file", File.class);
-        addOutPortToHub("list", List.class);
+        addInPortToBlock("file", File.class);
+        addOutPortToBlock("list", List.class);
 
         Label label = new Label(".csv");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

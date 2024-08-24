@@ -5,7 +5,7 @@ import jo.vpl.core.Workspace;
 import javafx.scene.paint.Color;
 import javax.xml.namespace.QName;
 import jo.vpl.util.CustomColorBox;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -17,20 +17,20 @@ import jo.vpl.core.BlockInfo;
         category = "Input",
         description = "Pick a nice color from the palette",
         tags = {"input", "color"})
-public class ColorHub extends Block {
+public class ColorBlock extends Block {
 
-    public ColorHub(Workspace hostCanvas) {
+    public ColorBlock(Workspace hostCanvas) {
         super(hostCanvas);
 
         setName("Color Picker");
 
-        addOutPortToHub("color", Color.class);
+        addOutPortToBlock("color", Color.class);
 
         CustomColorBox picker = new CustomColorBox();
 
         outPorts.get(0).dataProperty().bind(picker.customColorProperty());
 
-        addControlToHub(picker);
+        addControlToBlock(picker);
     }
 
     public Color getColor() {
@@ -48,13 +48,13 @@ public class ColorHub extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         xmlTag.getOtherAttributes().put(QName.valueOf("color"), getColor().toString());
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         String color = xmlTag.getOtherAttributes().get(QName.valueOf("color"));
         this.setColor(Color.valueOf(color));
@@ -62,7 +62,7 @@ public class ColorHub extends Block {
 
     @Override
     public Block clone() {
-        ColorHub hub = new ColorHub(hostCanvas);
+        ColorBlock hub = new ColorBlock(hostCanvas);
         hub.setColor(this.getColor());
         return hub;
     }

@@ -22,15 +22,15 @@ public class Multiply extends Block {
 
         setName("Mul");
 
-        addInPortToHub("double : A", double.class);
-        addInPortToHub("double : B", double.class);
+        addInPortToBlock("double : A", double.class);
+        addInPortToBlock("double : B", double.class);
 
-        addOutPortToHub("double : Result", double.class);
+        addOutPortToBlock("double : Result", double.class);
 
         Label label = new Label("X");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

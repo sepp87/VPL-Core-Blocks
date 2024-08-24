@@ -27,13 +27,13 @@ public class ReadIfc extends Block {
 
         setName("Read .ifc");
 
-        addInPortToHub("file", File.class);
-        addOutPortToHub("file", File.class);
+        addInPortToBlock("file", File.class);
+        addOutPortToBlock("file", File.class);
 
         Label label = new Label(".ifc");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

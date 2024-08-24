@@ -24,14 +24,14 @@ public class Size extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("list", Object.class);
+        addInPortToBlock("list", Object.class);
 
-        addOutPortToHub("size", int.class);
+        addOutPortToBlock("size", int.class);
 
         Label label = new Label("Size");
         label.getStyleClass().add("hub-text");
         
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

@@ -18,7 +18,7 @@ import javafx.scene.control.SpinnerValueFactory.ListSpinnerValueFactory;
 import javax.xml.namespace.QName;
 import jo.vpl.core.Port;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -39,12 +39,12 @@ public class ToFormattedString extends Block {
 
         setName("Date");
 
-        addInPortToHub("String : Date", String.class);
-        addOutPortToHub("String : Date", String.class);
+        addInPortToBlock("String : Date", String.class);
+        addOutPortToBlock("String : Date", String.class);
 
         Label label = getAwesomeIcon(IconType.FA_CLOCK_O);
 
-        addControlToHub(label);
+        addControlToBlock(label);
         
         //Set current date as outgoing data
         String now = targetFormat.format(new Date());
@@ -100,14 +100,14 @@ public class ToFormattedString extends Block {
 
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         xmlTag.getOtherAttributes().put(QName.valueOf("key"), "value");
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         String value = xmlTag.getOtherAttributes().get(QName.valueOf("key"));

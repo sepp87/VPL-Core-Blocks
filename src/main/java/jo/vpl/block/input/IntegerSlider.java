@@ -12,7 +12,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javax.xml.namespace.QName;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -36,7 +36,7 @@ public class IntegerSlider extends Block {
         super(hostCanvas);
         setName("Integer");
 
-        addOutPortToHub("int", Integer.class);
+        addOutPortToBlock("int", Integer.class);
 
         slider = new Slider(0, 10, 0);
         slider.setBlockIncrement(1);
@@ -59,7 +59,7 @@ public class IntegerSlider extends Block {
         slider.setLayoutY(4);
         p.getChildren().addAll(expand, slider);
 
-        addControlToHub(p);
+        addControlToBlock(p);
 
         setOnMouseEntered(this::handle_MouseEnter);
     }
@@ -216,7 +216,7 @@ public class IntegerSlider extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         xmlTag.getOtherAttributes().put(QName.valueOf("value"), integerValueProperty().get() + "");
         xmlTag.getOtherAttributes().put(QName.valueOf("min"), integerMinProperty().get() + "");
@@ -225,7 +225,7 @@ public class IntegerSlider extends Block {
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         Integer value = Integer.parseInt(xmlTag.getOtherAttributes().get(QName.valueOf("value")));
         Integer min = Integer.parseInt(xmlTag.getOtherAttributes().get(QName.valueOf("min")));

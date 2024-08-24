@@ -13,7 +13,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javax.xml.namespace.QName;
 import jo.vpl.core.Port;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -34,8 +34,8 @@ public class TextHub extends Block {
         setName("Panel");
         setResizable(true);
 
-        addInPortToHub("Object", Object.class);
-        addOutPortToHub("String", String.class);
+        addInPortToBlock("Object", Object.class);
+        addOutPortToBlock("String", String.class);
 
         TextArea area = new TextArea();
 
@@ -51,7 +51,7 @@ public class TextHub extends Block {
 //            text.setLineSpacing(7);
         });
 
-        addControlToHub(area);
+        addControlToBlock(area);
 
         inPorts.get(0).activeProperty().addListener(this::handle_IncomingData);
 
@@ -169,7 +169,7 @@ public class TextHub extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         String text = "";
         TextArea area = (TextArea) controls.get(0);
@@ -180,7 +180,7 @@ public class TextHub extends Block {
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         String str = xmlTag.getOtherAttributes().get(QName.valueOf("text"));
         this.setText(str);

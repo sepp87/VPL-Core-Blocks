@@ -26,15 +26,15 @@ public class ThenCondition extends Block {
 
         setName("Then");
 
-        addInPortToHub("Boolean : Condition", Boolean.class);
-        addInPortToHub("Object", Object.class);
+        addInPortToBlock("Boolean : Condition", Boolean.class);
+        addInPortToBlock("Object", Object.class);
 
-        addOutPortToHub("Object", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         Label label = new Label("Then");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

@@ -8,7 +8,7 @@ import jo.vpl.core.Workspace;
 import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import jo.vpl.core.Port;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -29,13 +29,13 @@ public class AccumulateItems extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("Object : Item", Object.class);
-        addOutPortToHub("Object : List", Object.class);
+        addInPortToBlock("Object : Item", Object.class);
+        addOutPortToBlock("Object : List", Object.class);
 
         Label label = new Label("i++");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
 
         List list = jo.vpl.core.Util.getList(Object.class);
         outPorts.get(0).setData(list);
@@ -93,14 +93,14 @@ public class AccumulateItems extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         xmlTag.getOtherAttributes().put(QName.valueOf("outDataType"), outPorts.get(0).dataType.getName());
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         String className = xmlTag.getOtherAttributes().get(QName.valueOf("outDataType"));

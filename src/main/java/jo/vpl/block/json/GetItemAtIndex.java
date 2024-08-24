@@ -14,7 +14,7 @@ import static jo.vpl.core.Util.getDoubleValue;
 import static jo.vpl.core.Util.getIntegerValue;
 import static jo.vpl.core.Util.getLongValue;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -35,13 +35,13 @@ public class GetItemAtIndex extends Block {
 
         setName("getJsonValue");
 
-        addInPortToHub("String : Json", String.class);
-        addInPortToHub("int : Index", int.class);
+        addInPortToBlock("String : Json", String.class);
+        addInPortToBlock("int : Index", int.class);
 
-        addOutPortToHub("String", String.class);
+        addOutPortToBlock("String", String.class);
 
         Label label = getAwesomeIcon(IconType.FA_PAPER_PLANE);
-        addControlToHub(label);
+        addControlToBlock(label);
 
         parser = new JsonParser();
     }
@@ -150,14 +150,14 @@ public class GetItemAtIndex extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         xmlTag.getOtherAttributes().put(QName.valueOf("outDataType"), outPorts.get(0).dataType.getSimpleName());
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         String value = xmlTag.getOtherAttributes().get(QName.valueOf("outDataType"));

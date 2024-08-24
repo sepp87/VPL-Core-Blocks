@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javax.xml.namespace.QName;
 import jo.vpl.core.Port;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -32,11 +32,11 @@ public class Concatenate extends Block {
 
         setName("Concat");
 
-        addInPortToHub("String", String.class);
-        addOutPortToHub("String", String.class);
+        addInPortToBlock("String", String.class);
+        addOutPortToBlock("String", String.class);
 
         Label label = getAwesomeIcon(IconType.FA_BEER);
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     //Handle the number of ports that are active, always give one more that needed
@@ -45,9 +45,9 @@ public class Concatenate extends Block {
         //check if port which connection is added to is the temporary port
         //if not delete the temporary port and generate a new port
         if (source == temporaryPort) {
-            addInPortToHub(source);
+            addInPortToBlock(source);
         } else {
-            addInPortToHub("String", String.class);
+            addInPortToBlock("String", String.class);
             temporaryPort = null;
         }
 
@@ -56,7 +56,7 @@ public class Concatenate extends Block {
     @Override
     public void handle_IncomingConnectionRemoved(Port source) {
         //remove port, set it as temporary
-        removeInPortFromHub(source);
+        removeInPortFromBlock(source);
 System.out.println("call");
         temporaryPort = source;
     }
@@ -108,7 +108,7 @@ System.out.println("call");
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         //Save the number of ports currently available
@@ -116,7 +116,7 @@ System.out.println("call");
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         //Create the number of ports before running calculate

@@ -27,14 +27,14 @@ public class AddItemToFront extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("Object : List", Object.class);
-        addInPortToHub("Object : Item", Object.class);
+        addInPortToBlock("Object : List", Object.class);
+        addInPortToBlock("Object : Item", Object.class);
 
-        addOutPortToHub("Object : List", Object.class);
+        addOutPortToBlock("Object : List", Object.class);
 
         Label label = new Label("+...");
         label.getStyleClass().add("hub-text");
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

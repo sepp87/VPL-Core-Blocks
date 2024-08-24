@@ -22,14 +22,14 @@ public class Abs extends Block {
 
         setName("Abs");
 
-        addInPortToHub("double : A", double.class);
+        addInPortToBlock("double : A", double.class);
 
-        addOutPortToHub("double : Result", double.class);
+        addOutPortToBlock("double : Result", double.class);
 
         Label label = new Label("|A|");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

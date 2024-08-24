@@ -25,13 +25,13 @@ public class GetFirstItem extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("List", Object.class);
-        addOutPortToHub("Object", Object.class);
+        addInPortToBlock("List", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         Label label = new Label("1st");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

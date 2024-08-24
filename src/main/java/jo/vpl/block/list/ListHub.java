@@ -25,12 +25,12 @@ public class ListHub extends Block {
         super(hostCanvas);
 
         setName("List");
-        addOutPortToHub("List", Object.class);
+        addOutPortToBlock("List", Object.class);
 
         Label label = new Label("List");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
         
         calculate();
     }

@@ -28,13 +28,13 @@ public class Rotate extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("List", Object.class);
-        addInPortToHub("int", int.class);
+        addInPortToBlock("List", Object.class);
+        addInPortToBlock("int", int.class);
 
-        addOutPortToHub("Object", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         Label label = getAwesomeIcon(IconType.FA_REPEAT);
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

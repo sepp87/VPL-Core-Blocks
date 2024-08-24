@@ -14,7 +14,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javax.xml.namespace.QName;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -34,7 +34,7 @@ public class DoubleSlider extends Block {
         super(hostCanvas);
         setName("Double");
 
-        addOutPortToHub("double", Double.class);
+        addOutPortToBlock("double", Double.class);
 
         slider = new Slider(0, 10, 0);
         slider.setBlockIncrement(0.1);
@@ -67,7 +67,7 @@ public class DoubleSlider extends Block {
         slider.setLayoutY(4);
         p.getChildren().addAll(expand, slider);
 
-        addControlToHub(p);
+        addControlToBlock(p);
 
         setOnMouseEntered(this::handle_MouseEnter);
     }
@@ -229,7 +229,7 @@ public class DoubleSlider extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         xmlTag.getOtherAttributes().put(QName.valueOf("value"), slider.getValue() + "");
         xmlTag.getOtherAttributes().put(QName.valueOf("min"), slider.getMin() + "");
@@ -238,7 +238,7 @@ public class DoubleSlider extends Block {
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         Double value = Double.parseDouble(xmlTag.getOtherAttributes().get(QName.valueOf("value")));
         Double min = Double.parseDouble(xmlTag.getOtherAttributes().get(QName.valueOf("min")));

@@ -31,12 +31,12 @@ public class Watch3D extends Block {
 
         mainContentGrid.setPrefWidth(320);
         mainContentGrid.setPrefHeight(240);
-        addInPortToHub("group", Group.class);
-        addOutPortToHub("group", Group.class);
+        addInPortToBlock("group", Group.class);
+        addOutPortToBlock("group", Group.class);
 
         ObjViewer viewer = new ObjViewer(mainContentGrid);
 
-        addControlToHub(viewer);
+        addControlToBlock(viewer);
     }
 
     @Override

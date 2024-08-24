@@ -10,7 +10,7 @@ import static jo.vpl.core.Util.getBooleanValue;
 import static jo.vpl.core.Util.getDoubleValue;
 import static jo.vpl.core.Util.getIntegerValue;
 import static jo.vpl.core.Util.getLongValue;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -28,7 +28,7 @@ public class StringHub extends Block {
         super(hostCanvas);
         setName("String");
 
-        addOutPortToHub("String : Value", String.class);
+        addOutPortToBlock("String : Value", String.class);
 
         TextField text = new TextField();
         text.setPromptText("Write here...");
@@ -37,7 +37,7 @@ public class StringHub extends Block {
         text.setStyle("-fx-pref-column-count: 26;\n"
                 + "fx-font-size: 10;\n");
 
-        addControlToHub(text);
+        addControlToBlock(text);
 
 //        text.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 //
@@ -139,14 +139,14 @@ public class StringHub extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         xmlTag.getOtherAttributes().put(QName.valueOf("string"), getString());
         xmlTag.getOtherAttributes().put(QName.valueOf("outDataType"), outPorts.get(0).dataType.getSimpleName());
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         String str = xmlTag.getOtherAttributes().get(QName.valueOf("string"));
         this.setString(str);

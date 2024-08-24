@@ -24,14 +24,14 @@ public class IsEmpty extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("List", Object.class);
+        addInPortToBlock("List", Object.class);
 
-        addOutPortToHub("boolean", boolean.class);
+        addOutPortToBlock("boolean", boolean.class);
 
         Label label = new Label("...?");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

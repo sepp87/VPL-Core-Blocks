@@ -28,12 +28,12 @@ public class Reverse extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("List", Object.class);
+        addInPortToBlock("List", Object.class);
 
-        addOutPortToHub("Object", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         Label label = getAwesomeIcon(IconType.FA_SORT_AMOUNT_DESC);
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

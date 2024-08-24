@@ -22,15 +22,15 @@ public class Divide extends Block {
 
         setName("Div");
 
-        addInPortToHub("double : A", double.class);
-        addInPortToHub("double : B", double.class);
+        addInPortToBlock("double : A", double.class);
+        addInPortToBlock("double : B", double.class);
 
-        addOutPortToHub("double : Result", double.class);
+        addOutPortToBlock("double : Result", double.class);
 
         Label label = new Label("/");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

@@ -12,7 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javax.xml.namespace.QName;
 import jo.vpl.core.Port;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -37,11 +37,11 @@ public class TimeInterval extends Block {
 
         setName("Template");
 
-        addInPortToHub("Object", Object.class);
-        addOutPortToHub("Object", Object.class);
+        addInPortToBlock("Object", Object.class);
+        addOutPortToBlock("Object", Object.class);
 
         TOGGLE = getAwesomeIcon(IconType.FA_TOGGLE_OFF);
-        addControlToHub(TOGGLE);
+        addControlToBlock(TOGGLE);
 
         TOGGLE.setOnMouseClicked(this::button_MouseClick);
     }
@@ -83,7 +83,7 @@ public class TimeInterval extends Block {
             return;
         }
         System.out.println(Thread.currentThread().getName());
-        inPorts.get(0).connectedConnections.get(0).getStartPort().parentHub.calculate();
+        inPorts.get(0).connectedConnections.get(0).getStartPort().parentBlock.calculate();
     }
 
     @Override
@@ -158,14 +158,14 @@ public class TimeInterval extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         //Retrieval of custom attribute
         xmlTag.getOtherAttributes().put(QName.valueOf("key"), "value");
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         //Retrieval of custom attribute
         String value = xmlTag.getOtherAttributes().get(QName.valueOf("key"));

@@ -21,12 +21,12 @@ public class Pi extends Block {
 
         setName("Pi");
 
-        addOutPortToHub("double : Pi", double.class);        
+        addOutPortToBlock("double : Pi", double.class);        
         
         Label label = new Label("Pi");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
 
         outPorts.get(0).setData(Math.PI);
     }

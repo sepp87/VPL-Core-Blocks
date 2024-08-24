@@ -26,12 +26,12 @@ public class GetId extends Block {
 
         setName("Id");
 
-        addInPortToHub("node", Node.class);
+        addInPortToBlock("node", Node.class);
 
-        addOutPortToHub("str", String.class);
+        addOutPortToBlock("str", String.class);
 
         Label label = getAwesomeIcon(IconType.FA_BARCODE);
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     /**

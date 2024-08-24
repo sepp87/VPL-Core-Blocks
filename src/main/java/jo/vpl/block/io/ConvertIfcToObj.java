@@ -27,13 +27,13 @@ public class ConvertIfcToObj extends Block {
 
         setName("Ifc to Obj");
 
-        addInPortToHub("file", File.class);
-        addOutPortToHub("file", File.class);
+        addInPortToBlock("file", File.class);
+        addOutPortToBlock("file", File.class);
 
         Label label = new Label("Ifc>Obj");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override

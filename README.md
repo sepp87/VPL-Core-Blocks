@@ -6,6 +6,6 @@ See example at: https://www.youtube.com/watch?v=Oev1IJZvAPw
 
 ### QUICK START
 * Download, build and run the VPL-Core repo
-* Download and build VPL-Core-Hubs
-* Add VPL-Core-Hubs.jar to the subfolder lib/ of VPL-Core
+* Download and build VPL-Core-Blocks
+* Add VPL-Core-Blocks.jar to the subfolder lib/ of VPL-Core
 <br>

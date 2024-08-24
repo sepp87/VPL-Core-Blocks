@@ -12,7 +12,7 @@ import javafx.stage.FileChooser;
 import javax.xml.namespace.QName;
 import jo.vpl.core.BlockButton;
 import jo.vpl.util.IconType;
-import jo.vpl.xml.HubTag;
+import jo.vpl.xml.BlockTag;
 import jo.vpl.core.BlockInfo;
 
 /**
@@ -25,13 +25,13 @@ import jo.vpl.core.BlockInfo;
         description = "Open a file",
         tags = {"file", "open", "load"}
 )
-public class FileHub extends Block {
+public class FileBlock extends Block {
 
-    public FileHub(Workspace hostCanvas) {
+    public FileBlock(Workspace hostCanvas) {
         super(hostCanvas);
         setName("File");
 
-        addOutPortToHub("file", File.class);
+        addOutPortToBlock("file", File.class);
 
         TextField text = new TextField();
         text.setPromptText("Open a file...");
@@ -42,7 +42,7 @@ public class FileHub extends Block {
 
         HBox box = new HBox(5);
         box.getChildren().addAll(text, button);
-        addControlToHub(box);
+        addControlToBlock(box);
 
         text.setOnKeyReleased(this::textField_KeyRelease);
         text.setOnMouseEntered(this::textField_MouseEnter);
@@ -102,13 +102,13 @@ public class FileHub extends Block {
     }
 
     @Override
-    public void serialize(HubTag xmlTag) {
+    public void serialize(BlockTag xmlTag) {
         super.serialize(xmlTag);
         xmlTag.getOtherAttributes().put(QName.valueOf("path"), getPath());
     }
 
     @Override
-    public void deserialize(HubTag xmlTag) {
+    public void deserialize(BlockTag xmlTag) {
         super.deserialize(xmlTag);
         String path = xmlTag.getOtherAttributes().get(QName.valueOf("path"));
         this.setPath(path);
@@ -117,7 +117,7 @@ public class FileHub extends Block {
 
     @Override
     public Block clone() {
-        FileHub hub = new FileHub(hostCanvas);
+        FileBlock hub = new FileBlock(hostCanvas);
         hub.setPath(this.getPath());
         hub.calculate();
         return hub;

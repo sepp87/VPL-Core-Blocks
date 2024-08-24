@@ -25,14 +25,14 @@ public class GetLastItem extends Block {
 
         //There is no checking of list in port make connection boolean statement
         //Might want to fix that!
-        addInPortToHub("list", Object.class);
+        addInPortToBlock("list", Object.class);
 
-        addOutPortToHub("obj", Object.class);
+        addOutPortToBlock("obj", Object.class);
 
         Label label = new Label("Last");
         label.getStyleClass().add("hub-text");
 
-        addControlToHub(label);
+        addControlToBlock(label);
     }
 
     @Override
