@@ -47,8 +47,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <packageName>jo.vpl.block</packageName>
-                            <mainClass>jo.vpl.block.Main</mainClass>
+                            <packageName>vpllib</packageName>
+                            <mainClass>vpllib.Main</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
