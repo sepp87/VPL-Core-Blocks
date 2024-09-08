@@ -34,7 +34,7 @@ public class Main {
      * Retrieve all blocks from external libraries
      */
     public static void loadExternalBlocks() {
-        File dir = new File(Config.get().getLibraryDirectory());
+        File dir = new File(Config.get().libraryDirectory());
         File[] libraries = Util.getFilesByExtensionFrom(dir, ".jar");
 
         for (File lib : libraries) {
